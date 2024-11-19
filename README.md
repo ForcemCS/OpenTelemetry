@@ -17,7 +17,7 @@
 
 - OpenTelemetry Collector可将信息导出到各种第三方应用程序中
 
-- - 将（分布式）traces 导出到 Jaeger 实例中
+  - 将（分布式）traces 导出到 Jaeger 实例中
   - 指标导出到 Prometheus 实例中
 
 <img src="./img/2.png" alt="1" style="zoom:50%;" />
