@@ -26,11 +26,12 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=prod
 #      - OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4318 # http endpoint
+#      #所有组件都指向 OpenTelemetry 收集器，并使用监听 GRPC 端口 4317,具体的环境变量在.env 文件中
       - OTEL_EXPORTER_OTLP_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
       - OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT}
       - OTEL_EXPORTER_OTLP_TRACES_PROTOCOL=grpc
       - OTEL_EXPORTER_OTLP_METRICS_PROTOCOL=grpc
-      #资源属性
+      #资源属性,在 OpenTelemetry 范围内标识自己的属性。该名称稍后还会出现在各种仪表板中。
       - OTEL_RESOURCE_ATTRIBUTES=service.name=todobackend-springboot
       - OTEL_METRICS_EXPORTER=otlp,logging-otlp
       - OTEL_LOGS_EXPORTER=none
