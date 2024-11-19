@@ -4,7 +4,7 @@
 
 - 该应用程序由多语言分布式组件组成，可执行待办事项列表这一简单任务。
 
-- - 主要组件是使用 Spring Boot 框架以 Java 实现的 REST 服务器，它使用 Postgres 数据库进行持久化
+  - 主要组件是使用 Spring Boot 框架以 Java 实现的 REST 服务器，它使用 Postgres 数据库进行持久化
   - 指向该服务器的一个前端组件是使用 [Thymeleaf](https://www.thymeleaf.org/) 框架用 Java 编写的。
   - 使用 Flask 框架用 Python 编写的另一个前端也指向该后端
   - 有一个简单的负载生成器，它不断向前端组件发送请求
